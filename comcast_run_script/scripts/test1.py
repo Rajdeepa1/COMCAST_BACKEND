@@ -35,8 +35,9 @@ def func(l):
     chrome_options.add_argument('--disable-dev-shm-usage')
 
     #chrome_options.add_argument('--disable_infobars')
-    
-    driver = webdriver.Chrome(executable_path="chromedriver", options=chrome_options)
+    path=os.environ['PATH']
+    print(path)
+    driver = webdriver.Chrome(options=chrome_options,executable_path="chromedriver")
 
 
     ret_str=""
